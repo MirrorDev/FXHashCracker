@@ -27,6 +27,7 @@ public class CrackDict implements interfaces.HashCrackerDictionary{
             return MessageDigest.getInstance(name);
         } catch (NoSuchAlgorithmException e) {
             System.exit(-2);
+            return null;
         }
     }
 }

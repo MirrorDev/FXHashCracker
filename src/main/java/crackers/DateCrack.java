@@ -13,6 +13,9 @@ public class DateCrack implements interfaces.HashCrackerBirthday{
     private LocalDate checkUntilDate;
 
     public DateCrack(String hash, LocalDate checkUntilDate) {
+        if (hash == null || checkUntilDate == null) {
+            throw new IllegalArgumentException("No Arguments!");
+        }
         this.hash = hash;
         this.checkUntilDate = checkUntilDate;
     }

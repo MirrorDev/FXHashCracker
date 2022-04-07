@@ -17,11 +17,6 @@ public class CrackDict implements interfaces.HashCrackerDictionary{
     }
 
     @Override
-    public String printStackTrace() {
-        return null;
-    }
-
-    @Override
     public MessageDigest getHashAlgorithm(String name) {
         try {
             return MessageDigest.getInstance(name);

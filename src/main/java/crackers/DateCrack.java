@@ -65,9 +65,4 @@ public class DateCrack implements interfaces.HashCrackerBirthday{
         }
         return null;
     }
-
-    @Override
-    public String printStackTrace() {
-        return null;
-    }
 }

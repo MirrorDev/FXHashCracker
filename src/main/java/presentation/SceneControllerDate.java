@@ -33,10 +33,16 @@ public class SceneControllerDate implements Initializable {
     private Text txtConsole;
 
     @FXML
+    private TextField txtFieldDateFormat;
+
+    @FXML
     private TextField txtFieldInput;
 
     @FXML
     private TextField txtFiledResult;
+
+    @FXML
+    private Text txtFormat;
 
     @FXML
     private Text txtInput;

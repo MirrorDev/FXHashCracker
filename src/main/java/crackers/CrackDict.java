@@ -1,6 +1,5 @@
 package crackers;
 
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
@@ -45,7 +44,7 @@ public class CrackDict implements interfaces.HashCrackerDictionary{
             if (hex.equals(hash)) {
                 consoleOut.add(hex);
                 consoleOut.add(value);
-                return consoleOut;
+                return consoleOut; // return info
             } else {
                 continue;
             }

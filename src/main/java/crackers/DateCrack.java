@@ -52,12 +52,15 @@ public class DateCrack implements interfaces.HashCrackerBirthday{
             }
             hex = hexBuilder.toString(); // Giving variable hex the Hex-String
 
+            // switch-case here is useless
+
             if (hex.equals(hash)) { // If we found the value
+                // Add info
                 consoleOut.add(hex);
                 consoleOut.add(controlDate.format(formatter).toString());
-                return consoleOut;
-            } else {
-                controlDate = controlDate.plusDays(1);
+                return consoleOut; // returning info
+            } else { // Should that not be the case
+                controlDate = controlDate.plusDays(1); // Add one day to the date
             }
         }
         return null;

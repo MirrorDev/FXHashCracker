@@ -1,3 +1,8 @@
+# IntelliJ-Folders
+/.idea
+/target
+/test
+
 # Compiled class file
 *.class
 

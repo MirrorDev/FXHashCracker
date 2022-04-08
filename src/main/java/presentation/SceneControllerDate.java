@@ -61,11 +61,12 @@ public class SceneControllerDate implements Initializable {
         bntBackToMain.setOnAction(event -> {
             try {
                 URL urlForDictCracker = getClass().getClassLoader().getResource("layoutMain.fxml").toURI().toURL();
-                bntBackToMain.getScene().getWindow().hide();
                 SceneSwitcher switcher = new SceneSwitcher(urlForDictCracker);
                 Stage root = new Stage();
                 root.setTitle("SHA-256-Crackers");
                 switcher.start(root);
+                Stage stage = (Stage) bntBackToMain.getScene().getWindow();
+                stage.close();
             } catch (Exception e) {
                 System.out.println(e);
                 System.exit(-1);

@@ -30,11 +30,12 @@ public class SceneControllerMain implements Initializable {
         bntDict.setOnAction(event -> {
             try {
                 URL urlForDictCracker = getClass().getClassLoader().getResource("layoutDictCracker.fxml").toURI().toURL();
-                bntDict.getScene().getWindow().hide();
                 SceneSwitcher switcher = new SceneSwitcher(urlForDictCracker);
                 Stage root = new Stage();
                 root.setTitle("Dictionary-Hash-Cracker (SHA-256)");
                 switcher.start(root);
+                Stage stage = (Stage) bntDict.getScene().getWindow();
+                stage.close();
             } catch (Exception e) {
                 System.exit(-1);
             }
@@ -43,11 +44,12 @@ public class SceneControllerMain implements Initializable {
         bntDate.setOnAction(event -> {
             try {
                 URL urlForDateCracker = getClass().getClassLoader().getResource("layoutDateCracker.fxml").toURI().toURL();
-                bntDate.getScene().getWindow().hide();
                 Stage root = new Stage();
                 SceneSwitcher switcher = new SceneSwitcher(urlForDateCracker);
                 root.setTitle("Date-Hash-Cracker (SHA-256)");
                 switcher.start(root);
+                Stage stage = (Stage) bntDate.getScene().getWindow();
+                stage.close();
             } catch (Exception e) {
                 System.out.println(e);
                 System.exit(-1);

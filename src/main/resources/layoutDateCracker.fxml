@@ -11,10 +11,10 @@
     <children>
         <Button fx:id="bntBackToMain" layoutX="1018.0" layoutY="15.0" mnemonicParsing="false" text="Back to Main-Menu" />
         <Button fx:id="bntExit" layoutX="1157.0" layoutY="15.0" mnemonicParsing="false" text="Exit" />
-        <TextField fx:id="txtFieldInput" layoutX="137.0" layoutY="107.0" prefHeight="25.0" prefWidth="309.0" />
-        <TextField fx:id="txtFiledResult" editable="false" layoutX="137.0" layoutY="195.0" prefHeight="25.0" prefWidth="309.0" />
+        <TextField fx:id="txtFieldInput" layoutX="203.0" layoutY="96.0" prefHeight="25.0" prefWidth="309.0" />
+        <TextField fx:id="txtFiledResult" editable="false" layoutX="203.0" layoutY="195.0" prefHeight="25.0" prefWidth="309.0" />
         <TextArea fx:id="txtAreaSysOut" editable="false" layoutX="711.0" layoutY="107.0" prefHeight="200.0" prefWidth="450.0" />
-        <TextField editable="false" layoutY="377.0" prefHeight="25.0" prefWidth="1208.0" visible="false" />
+        <TextField fx:id="txtFieldStatus" editable="false" layoutY="377.0" prefHeight="25.0" prefWidth="1208.0" visible="false" />
       <Text fx:id="txtTitle" layoutX="14.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date-Cracker (SHA-256)">
          <font>
             <Font size="31.0" />
@@ -25,12 +25,12 @@
             <Font size="21.0" />
          </font>
       </Text>
-      <Text fx:id="txtInput" layoutX="14.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SHA-256-Hash">
+      <Text fx:id="txtInput" layoutX="14.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SHA-256-Hash">
          <font>
             <Font size="15.0" />
          </font>
       </Text>
-      <Text fx:id="txtResult" layoutX="19.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date found">
+      <Text fx:id="txtResult" layoutX="14.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date found">
          <font>
             <Font size="15.0" />
          </font>
@@ -40,13 +40,13 @@
             <Font size="15.0" />
          </font>
       </Text>
-      <Button fx:id="bntSubmit" layoutX="137.0" layoutY="233.0" mnemonicParsing="false" text="Submit" />
-      <Button fx:id="bntClear" layoutX="226.0" layoutY="233.0" mnemonicParsing="false" text="Clear" />
-      <Text fx:id="txtFormat" layoutX="14.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date-Format">
+      <Button fx:id="bntSubmit" layoutX="51.0" layoutY="238.0" mnemonicParsing="false" text="Submit" />
+      <Button fx:id="bntClear" layoutX="142.0" layoutY="238.0" mnemonicParsing="false" text="Clear" />
+      <Text fx:id="txtFormat" layoutX="14.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date-Formats (split with ,)">
          <font>
             <Font size="15.0" />
          </font>
       </Text>
-      <TextField fx:id="txtFieldDateFormat" editable="false" layoutX="137.0" layoutY="148.0" prefHeight="25.0" prefWidth="309.0" />
+      <TextField fx:id="txtFieldDateFormat" editable="false" layoutX="203.0" layoutY="147.0" prefHeight="25.0" prefWidth="309.0" />
     </children>
 </AnchorPane>

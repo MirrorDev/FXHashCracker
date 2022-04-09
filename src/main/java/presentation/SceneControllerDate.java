@@ -39,6 +39,9 @@ public class SceneControllerDate implements Initializable {
     private TextField txtFieldInput;
 
     @FXML
+    private TextField txtFieldStatus;
+
+    @FXML
     private TextField txtFiledResult;
 
     @FXML

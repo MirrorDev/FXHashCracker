@@ -20,7 +20,13 @@ public class SceneControllerDict implements Initializable {
     private Button bntBackToMain;
 
     @FXML
+    private Button bntClear;
+
+    @FXML
     private Button bntExit;
+
+    @FXML
+    private Button bntSubmit;
 
     @FXML
     private TextArea txtAreaSysOut;
@@ -29,10 +35,19 @@ public class SceneControllerDict implements Initializable {
     private Text txtConsole;
 
     @FXML
+    private TextField txtFieldDateFormat;
+
+    @FXML
     private TextField txtFieldInput;
 
     @FXML
+    private TextField txtFieldStatus;
+
+    @FXML
     private TextField txtFiledResult;
+
+    @FXML
+    private Text txtFormat;
 
     @FXML
     private Text txtInput;

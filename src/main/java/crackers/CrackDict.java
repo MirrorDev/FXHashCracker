@@ -1,10 +1,14 @@
 package crackers;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class CrackDict implements interfaces.HashCrackerDictionary{
@@ -67,11 +71,29 @@ public class CrackDict implements interfaces.HashCrackerDictionary{
         }
     }
 
-    public static void getWordsFromFile(String filename) {
-        throw new UnsupportedOperationException("TODO");
+    public static List<String> getWordsFromFile(String filename) throws IOException{
+        List<String> out = new ArrayList<>();
+        try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
+            while (reader.ready()) {
+                out.add(reader.readLine());
+            }
+        }
+        return out;
     }
+    public static List<List<String>> getWordsFromFileSplit(String filename) throws IOException{
+        List<String> out = new ArrayList<>();
+        List<String> out2 = new ArrayList<>();
+        int counter = 0;
 
-    public static List<List<String>> getWordsFromFileSplit(String filename) {
-        throw new UnsupportedOperationException("TODO");
+        try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
+            while (reader.ready()) {
+                if (counter % 2 == 0) {
+                    out.add(reader.readLine());
+                } else {
+                    out2.add(reader.readLine());
+                }
+            }
+        }
+        return new ArrayList<>(Arrays.asList(out, out2));
     }
 }

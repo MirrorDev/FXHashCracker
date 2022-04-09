@@ -25,8 +25,7 @@ public class RuntimeHashCracker {
                 return null;
             }
         }
-
-
+        throw new UnsupportedOperationException("FINISH");
     }
 
     public List<String> getDataDictThreaded() {

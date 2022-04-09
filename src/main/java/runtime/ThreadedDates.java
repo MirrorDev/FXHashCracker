@@ -1,5 +1,7 @@
 package runtime;
 
+import crackers.DateCrack;
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
@@ -20,6 +22,6 @@ public class ThreadedDates implements Runnable{
 
     @Override
     public void run() {
-
+        DateCrack crack = new DateCrack(hash, LocalDate.now());
     }
 }

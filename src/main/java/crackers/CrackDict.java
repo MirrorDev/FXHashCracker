@@ -23,7 +23,7 @@ public class CrackDict implements interfaces.HashCrackerDictionary{
     }
 
     @Override
-    public List<String> crackHash() throws IOException {
+    public List<String> crackHash(){
         // Method-Variables
         List<String> consoleOut = new ArrayList<>();
         MessageDigest hasher = getHashAlgorithm("SHA-256");

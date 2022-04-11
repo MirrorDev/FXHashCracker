@@ -21,7 +21,7 @@ public class DateCrack implements interfaces.HashCrackerBirthday{
     }
 
     @Override
-    public MessageDigest getHashAlgorithm(String name) {
+    private MessageDigest getHashAlgorithm(String name) {
         try {
             return MessageDigest.getInstance(name);
         } catch (NoSuchAlgorithmException e) {

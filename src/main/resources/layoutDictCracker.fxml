@@ -39,7 +39,7 @@
             <Font size="15.0" />
          </font>
       </Text>
-      <TextField editable="false" layoutY="377.0" prefHeight="25.0" prefWidth="1208.0" visible="false" />
+      <TextField fx:id="txtStatus" editable="false" layoutY="377.0" prefHeight="25.0" prefWidth="1208.0" visible="false" />
       <Button fx:id="bntSubmit" layoutX="184.0" layoutY="189.0" mnemonicParsing="false" onAction="#submitTxt" text="Submit" />
       <Button fx:id="bntClear" layoutX="302.0" layoutY="189.0" mnemonicParsing="false" onAction="#clearTxt" text="Clear" />
    </children>

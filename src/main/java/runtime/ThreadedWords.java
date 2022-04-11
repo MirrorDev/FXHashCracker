@@ -2,11 +2,13 @@ package runtime;
 
 import crackers.CrackDict;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ThreadedWords implements Runnable{
     private List<String> words;
     private String hash;
+    private List<String> out = new ArrayList<>();
 
     public ThreadedWords(List<String> words, String hash) {
         if (words == null || hash == null) {
@@ -19,6 +21,11 @@ public class ThreadedWords implements Runnable{
     @Override
     public void run(){
         CrackDict cracker = new CrackDict(words, hash);
-        List<String> out = cracker.crackHash();
+        this.out = cracker.crackHash();
+        getResult();
+    }
+
+    public List<String> getResult() {
+        return this.out;
     }
 }

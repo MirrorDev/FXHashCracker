@@ -23,6 +23,6 @@ public class ThreadedDates implements Runnable{
     @Override
     public void run() {
         DateCrack crack = new DateCrack(hash, LocalDate.now());
-
+        List<String> output = crack.crackHash(startPoint, format);
     }
 }

@@ -1,5 +1,6 @@
 package presentation;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -15,6 +16,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class SceneControllerDict implements Initializable {
+
 
     @FXML
     private Button bntBackToMain;
@@ -35,19 +37,10 @@ public class SceneControllerDict implements Initializable {
     private Text txtConsole;
 
     @FXML
-    private TextField txtFieldDateFormat;
-
-    @FXML
     private TextField txtFieldInput;
 
     @FXML
-    private TextField txtFieldStatus;
-
-    @FXML
     private TextField txtFiledResult;
-
-    @FXML
-    private Text txtFormat;
 
     @FXML
     private Text txtInput;
@@ -60,6 +53,16 @@ public class SceneControllerDict implements Initializable {
 
     @FXML
     private Text txtTitle1;
+
+    @FXML
+    void clearTxt(ActionEvent event) {
+
+    }
+
+    @FXML
+    void submitTxt(ActionEvent event) {
+
+    }
 
 
     @Override

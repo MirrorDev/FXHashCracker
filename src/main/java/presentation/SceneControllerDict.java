@@ -1,31 +1,21 @@
 package presentation;
 
-import crackers.CrackDict;
+import crackers.dictonaryCracker.DictonaryCrackerV2;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import runtime.RuntimeLauncher;
 import runtime.SceneSwitcher;
-import runtime.ThreadedWords;
 
-import java.io.File;
 import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
-import java.nio.file.Paths;
-import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.ResourceBundle;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
 
 public class SceneControllerDict implements Initializable {
 
@@ -80,6 +70,29 @@ public class SceneControllerDict implements Initializable {
 
     @FXML
     void submitTxt(ActionEvent event) {
+        DictonaryCrackerV2 dictonaryCrackerV2 = new DictonaryCrackerV2(txtFieldInput.getText(),
+                                                                    // insert file location here
+                                                                            "SHA-256");
+        try {
+            List<List<String>> hashed = dictonaryCrackerV2.crackHash();
+            List<String> control = null;
+            txtAreaSysOut.setText(dictonaryCrackerV2.getResults(hashed));
+            for (Iterator<List<String>> lstIterator = hashed.iterator(); lstIterator.hasNext();) {
+                control = lstIterator.next();
+                if (control.get(0).contains("Thread")) {
+                    continue;
+                } else {
+                    txtResult.setText(control.get(2));
+                    break;
+                }
+            }
+        } catch (IOException e) {
+            System.out.println(e);
+            System.exit(-1);
+        } catch (InterruptedException e) {
+            System.out.println(e);
+            System.exit(-1);
+        }
 
     }
 

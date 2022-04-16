@@ -20,9 +20,6 @@ public class ThreadedWords implements Runnable{
 
     @Override
     public void run(){
-        CrackDict cracker = new CrackDict(words, hash);
-        this.out = cracker.crackHash();
-        getResult();
     }
 
     public List<String> getResult() {
